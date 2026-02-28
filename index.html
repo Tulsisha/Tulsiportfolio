@@ -514,7 +514,70 @@ Thanks
       </div>
     </div>
   </section>
-
+<!-- ----/Contact/---------- -->
+<div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s" id="contact.html">
+  <div class="row g-0">
+      <div class="col-md-6">
+          
+             
+              <img class="img-fluid  contactimg" src="static\image\blog3.jpg" alt="">
+          
+      </div>
+      <div class="col-md-6 bg-dark d-flex align-items-center ">
+          <div class="p-5 wow fadeInUp cookie-regular" data-wow-delay="0.2s">
+              <h5 class="section-title ff-secondary text-start text-warning fw-normal">Contact Me--</h5>
+              <h1 class="text-white mb-4">Connect With Me Online</h1>
+              
+              <h3 class="text-warning"> {{msg}}</h3>
+              
+              <form action="Contact" method="post">
+               {% csrf_token %}
+                  <div class="row g-3">
+                      <div class="col-md-6">
+                          <div class="form-floating">
+                              <input type="text" class="form-control" id="name" placeholder="Your Name" name="name">
+                              <label for="username">Your Name</label>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-floating">
+                              <input type="email" class="form-control" id="email" placeholder="Your Email" name="email">
+                              <label for="email">Your Email</label>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-floating date" id="date3" data-target-input="nearest">
+                              <input type="contact" name="mobile" class="form-control datetimepicker-input" id="mobile" placeholder="mobile no" data-target="#date3" />
+                              <label for="datetime">Mobile. no:</label>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-floating">
+                              <select class="form-select" id="select1" name="city">
+                                <option value="Delhi">Delhi</option>
+                                <option value="Gurgaon">Gurgaon</option>
+                                <option value="Faridabad">Faridabad</option>
+                                <option value="More...">More...</option>
+                              </select>
+                              <label for="select1">City</label>
+                            </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="form-floating">
+                              <textarea class="form-control" name="purpose" placeholder="Purpose" id="message" style="height: 100px"></textarea>
+                              <label for="message">Purpose</label>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                          <button class="btn btn-warning w-100 py-3" type="submit">Connect</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+ 
 <!-- -----------footer------- -->
 
 <div class="container-fluid bg-dark text-light footer mt-3 wow fadeIn" data-wow-delay="0.1s" id="contact.html">
