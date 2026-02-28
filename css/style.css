@@ -868,3 +868,55 @@ img.eilogo {
 .ts-btn {
     margin-top: auto;
 }
+
+
+
+
+.tech-section {
+    padding: 40px 20px;
+}
+
+.tech-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.tech-card {
+    background: #111;
+    color: #fff;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+.tech-card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    transition: transform 0.4s ease;
+}
+
+.tech-card span {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Hover Effect */
+.tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    background: linear-gradient(135deg, #182c83, #2c4fb3);
+}
+
+.tech-card:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
