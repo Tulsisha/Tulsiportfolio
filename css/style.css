@@ -4,7 +4,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+h1, h2, h3, h4, h5, h6, p,a {
+    font-family: 'Josefin Sans', Helvetica, Arial, Lucida, sans-serif !important;
+}
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 100%;
+}
 /* ---------------- Fonts ---------------- */
 .abril-fatface-regular {
   font-family: "Abril Fatface", serif;
@@ -316,6 +321,16 @@
     width:100%;
     height: 200px;
   }
+      h1 {
+  font-size: 30px;
+}
+.tech-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 }
 @media screen and (max-width:576px) {
   .bannertxtt{
@@ -871,52 +886,99 @@ img.eilogo {
 
 
 
-
-.tech-section {
-    padding: 40px 20px;
-}
-
-.tech-title {
-    font-size: 28px;
-    margin-bottom: 30px;
-    font-weight: 600;
-}
-
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-}
-
-.tech-card {
-    background: #111;
-    color: #fff;
-    padding: 25px 15px;
+.tech-wrapper {
+    padding: 70px 20px;
+    background: linear-gradient(180deg, #f5f7fb, #ffffff);
     text-align: center;
-    border-radius: 12px;
-    transition: all 0.4s ease;
-    transform: translateY(0);
 }
 
-.tech-card i {
-    font-size: 40px;
-    margin-bottom: 10px;
-    transition: transform 0.4s ease;
+.tech-heading {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    position: relative;
 }
 
-.tech-card span {
+.tech-heading::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #182c83, #2c4fb3);
     display: block;
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
+
+.tech-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 110px;
+}
+
+.tech-item {
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.tech-item i {
+    font-size: 72px;
+    margin-bottom: 10px;
+    animation: colorShift 5s linear infinite;
+}
+
+/* Different delay for each icon */
+.tech-item:nth-child(1) i { animation-delay: 0s; }
+.tech-item:nth-child(2) i { animation-delay: 1s; }
+.tech-item:nth-child(3) i { animation-delay: 2s; }
+.tech-item:nth-child(4) i { animation-delay: 3s; }
+.tech-item:nth-child(5) i { animation-delay: 4s; }
+.tech-item:nth-child(6) i { animation-delay: 5s; }
+.tech-item:nth-child(7) i { animation-delay: 6s; }
+
+@keyframes colorShift {
+    0%   { color: #182c83; }
+    25%  { color: #2c4fb3; }
+    50%  { color: #ff9800; }
+    75%  { color: #00c853; }
+    100% { color: #182c83; }
+}
+
+.tech-item p {
     font-size: 14px;
-    margin-top: 5px;
+    font-weight: 500;
+    color: #444;
+    margin: 0;
 }
 
 /* Hover Effect */
-.tech-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-    background: linear-gradient(135deg, #182c83, #2c4fb3);
+.tech-item:hover {
+    transform: translateY(-12px);
 }
 
-.tech-card:hover i {
-    transform: scale(1.2) rotate(5deg);
+.tech-item:hover i {
+    color: #2c4fb3;
+    transform: scale(1.2);
+    text-shadow: 0 10px 25px rgba(44, 79, 179, 0.4);
+}
+
+.tech-item:hover p {
+    color: #2c4fb3;
+}
+
+/* Floating subtle animation */
+.tech-item {
+    animation: float 4s ease-in-out infinite;
+}
+
+.tech-item:nth-child(2) { animation-delay: 0.5s; }
+.tech-item:nth-child(3) { animation-delay: 1s; }
+.tech-item:nth-child(4) { animation-delay: 1.5s; }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
 }
