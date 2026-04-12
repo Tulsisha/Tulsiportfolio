@@ -333,7 +333,17 @@ footer{padding:2rem clamp(1.5rem,8vw,7rem);border-top:1px solid var(--border);di
   .n-avail{display:none;}
   .h-counter,.h-scroll{display:none;}
   .proj-row{grid-template-columns:50px 1fr;}
-  .pr-right{display:none;}
+   .pr-right{
+    display:flex; /* pehle none tha */
+    gap:10px;
+  }
+
+  .pr-arrow{
+    width:36px;
+    height:36px;
+    font-size:14px;
+  }
+
   #shape-label{display:none;}
 }
 
@@ -354,4 +364,204 @@ footer{padding:2rem clamp(1.5rem,8vw,7rem);border-top:1px solid var(--border);di
 
 .btn i {
   margin-right: 6px;
+}
+
+
+
+
+
+/* ================== LARGE SCREENS (1400px+) ================== */
+@media (min-width: 1400px){
+  .sec,
+  #experience,
+  #projects,
+  #contact{
+    padding: 10rem 10vw;
+  }
+
+  .h-title{
+    font-size: clamp(5rem, 10vw, 10rem);
+  }
+}
+
+
+/* ================== LAPTOP (1200px) ================== */
+@media (max-width: 1200px){
+  .exp-layout{
+    gap: 4rem;
+  }
+
+  #about{
+    gap: 4rem;
+  }
+
+  .svc-item{
+    padding: 2rem;
+  }
+}
+
+
+/* ================== TABLET (992px) ================== */
+@media (max-width: 992px){
+
+  /* NAV */
+  .n-links{
+    display: none;
+  }
+
+  /* HERO */
+  .h-title{
+    font-size: clamp(3rem, 8vw, 6rem);
+  }
+
+  .h-sub{
+    font-size: 0.9rem;
+  }
+
+  /* ABOUT */
+  #about{
+    grid-template-columns: 1fr;
+  }
+
+  /* EXPERIENCE */
+  .exp-layout{
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT */
+  #contact{
+    grid-template-columns: 1fr;
+  }
+
+  /* PROJECT GRID */
+  .proj-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ================== MOBILE (768px) ================== */
+@media (max-width: 768px){
+
+  html{
+    font-size: 14px;
+  }
+
+  /* HERO */
+  #hero{
+    padding: 0 1.5rem;
+  }
+
+  .h-title{
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .h-sub{
+    max-width: 100%;
+  }
+
+  .h-btns{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-p{
+    width: 100%;
+    text-align: center;
+  }
+
+  /* WORK */
+  .proj-row{
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+  }
+
+  .pr-title{
+    font-size: 1.2rem;
+  }
+
+  /* SERVICES */
+  .svc-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .svc-item{
+    padding: 1.8rem;
+  }
+
+  /* CONTACT */
+  .c-big{
+    font-size: 2.2rem;
+  }
+
+  .c-mail{
+    font-size: 1.2rem;
+  }
+
+  /* FOOTER */
+  footer{
+    flex-direction: column;
+    text-align: center;
+  }
+  
+}
+
+
+/* ================== SMALL MOBILE (480px) ================== */
+@media (max-width: 480px){
+
+  html{
+    font-size: 13px;
+  }
+
+  .h-title{
+    font-size: 2rem;
+  }
+
+  .loader-logo img{
+    height: 100px;
+    width: 300px;
+    align-items: center;
+  }
+
+  .loader-bar{
+    width: 150px;
+  }
+
+  .svc-h{
+    font-size: 1.2rem;
+  }
+
+  .pc-thumb{
+    height: 120px;
+    font-size: 3rem;
+  }
+
+  .proj-card-large .pc-thumb{
+    height: 160px;
+  }
+
+  .stat-n{
+    font-size: 2.5rem;
+  }
+}
+
+
+/* ================== ULTRA SMALL (360px) ================== */
+@media (max-width: 360px){
+
+  .h-title{
+    font-size: 1.8rem;
+  }
+
+  .btn-p{
+    font-size: 0.65rem;
+    padding: 0.7rem;
+  }
+
+  .svc-item{
+    padding: 1.5rem;
+  }
+
 }
