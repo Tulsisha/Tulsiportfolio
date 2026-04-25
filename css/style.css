@@ -230,8 +230,8 @@
   .slide.active .slide-btns { opacity: 1; transform: translateY(0); }
 
   .btn-primary {
-    background: var(--accent);
-    color: var(--bg);
+    background: var(--accent) !important;
+    color: var(--bg) !important;
     padding: 0.85rem 2rem;
     font-weight: 600;
     font-size: 0.9rem;
@@ -1713,6 +1713,57 @@
   @media (max-width: 480px) {
     .footer-main { grid-template-columns: 1fr; }
     .footer-brand { grid-column: span 1; }
-    section { padding: 5rem 5%; }
+    section { padding: 0rem 5%; }
     .contact-form-wrap { padding: 1.4rem; }
   }
+
+
+
+@media screen and (max-width: 767px) {
+  .slide-title {
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+  }
+  .about-text p {
+    text-align: justify;
+}
+.service-card {
+    padding: 1rem 1rem;
+    text-align: justify;
+}
+.pstat {
+    padding: 1rem 1rem 1rem 0;
+}
+.pstat-num {
+    font-size: 1.3rem;
+}
+.pcard-content {
+    padding: 1.1rem 1rem;
+}
+.pcard-title {
+    font-size: clamp(14px, 1vw, 1.45rem) !important;
+    
+}
+.pcard-1, .pcard-5, .pcard-3 {
+    min-height: 435px;
+}
+.pcard-5, .pcard-3 {
+    min-height: 335px;
+}
+#contact {
+    padding: 3rem 5%;
+}
+.contact-testimonial {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: justify;
+}
+.footer-bottom {
+    padding: 1.1rem 3%;
+    gap: 0rem;
+}
+.footer-links {
+    padding-left: 0px !important;
+}
+}
